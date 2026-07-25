@@ -82,7 +82,7 @@ body {
 }
 
 .hero {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -91,6 +91,17 @@ body {
   padding: 60px 6%;
   position: relative;
   overflow: hidden;
+  background-image: 
+    linear-gradient(to bottom, 
+      rgba(227, 190, 88, 0.15) 0%, 
+      rgba(188, 177, 120, 0.5) 45%, 
+      rgba(197, 197, 150, 0.95) 100%
+    ), 
+    url('image/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 }
 
 .eyebrow {
@@ -322,7 +333,7 @@ body {
 
 .scrapbook {
   display: flex;
-  flex-wrap: wrap;       /* kalau foto kebanyakan, otomatis lanjut ke baris berikutnya */
+  flex-wrap: wrap;       
   justify-content: center;
   gap: 30px;
   padding: 60px 6%;
@@ -528,33 +539,3 @@ footer h2 {
   border-radius: 50%;
 }
 
-/* ============================
-   ANIMATIONS
-   ============================ */
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.member-card {
-  animation: fadeInUp 0.6s ease forwards;
-  opacity: 0;
-}
-
-.member-card:nth-child(1) { animation-delay: 0.1s; }
-.member-card:nth-child(2) { animation-delay: 0.2s; }
-.member-card:nth-child(3) { animation-delay: 0.3s; }
-.member-card:nth-child(4) { animation-delay: 0.4s; }
-.member-card:nth-child(5) { animation-delay: 0.5s; }
-.member-card:nth-child(6) { animation-delay: 0.6s; }
-.member-card:nth-child(7) { animation-delay: 0.7s; }
-.member-card:nth-child(8) { animation-delay: 0.8s; }
-.member-card:nth-child(9) { animation-delay: 0.9s; }
-.member-card:nth-child(10) { animation-delay: 1.0s; }
