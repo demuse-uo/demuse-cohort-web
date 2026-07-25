@@ -91,17 +91,6 @@ body {
   padding: 60px 6%;
   position: relative;
   overflow: hidden;
-  background-image: 
-    linear-gradient(to bottom, 
-      rgba(227, 190, 88, 0.15) 0%, 
-      rgba(188, 177, 120, 0.5) 45%, 
-      rgba(197, 197, 150, 0.95) 100%
-    ), 
-    url('image/background.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
 }
 
 .eyebrow {
