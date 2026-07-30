@@ -35,7 +35,7 @@ html, body {
 }
 
 h1, h2, h3 {
-  font-family:'Playfair Display', serif ;
+  font-family:'Gyahegi', serif ;
   font-weight: 600;
 }
 
@@ -117,8 +117,10 @@ body {
   margin-bottom: 20px;
 }
 
-.hero h1 em {
+.hero h1 .highlight {
+  font-family: 'Cormorant Garamond', serif;
   font-style: italic;
+  font-weight: 600;
   color: var(--ming);
   text-decoration: underline;
   text-decoration-color: var(--navy);
