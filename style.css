@@ -200,10 +200,11 @@ body {
 }
 
 .about > p {
-  max-width: 600px;
+  max-width: 650px;
   margin: 0 auto 40px;
   color: var(--peony);
   line-height: 1.7;
+  font-size: clamp(0.95rem, 4vw, 1.1rem);
 }
 
 .stat-row {
@@ -532,3 +533,20 @@ footer h2 {
   border-radius: 50%;
 }
 
+@media (max-width: 600px) {
+  .about {
+    padding: 60px 6%;
+    margin: 30px 4%;
+    border-radius: 24px;
+  }
+
+  .about h2 {
+    font-size: clamp(1.6rem, 7vw, 2rem);
+    margin: 10px auto 16px;
+  }
+
+  .about p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
