@@ -30,6 +30,55 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+/* 3. ANIMASI BINTANG & DAUN JATUH */
+.petals {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.petal {
+  position: absolute;
+  top: -40px;
+  font-size: 20px;
+  opacity: 0;
+  color: var(--ochre);
+  animation: fall linear infinite;
+}
+
+.petal.moss { color: var(--moss); }
+.petal.clay { color: var(--clay); }
+
+.petal.foto {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--paper);
+  box-shadow: 0 4px 10px rgba(61,43,31,.25);
+  top: -60px; 
+  animation: fall linear infinite;
+}
+
+
+@keyframes fall {
+  0%   { transform: translateY(-10vh) rotate(0deg);   opacity: 0;    }
+  10%  { opacity: 0.85; }
+  100% { transform: translateY(110vh) rotate(360deg); opacity: 0;    }
+}
+
+.p1 { left: 8%;  animation-duration: 9s;    animation-delay: 0s;   }
+.p2 { left: 22%; animation-duration: 11s;   animation-delay: 2s;   }
+.p3 { left: 38%; animation-duration: 8s;    animation-delay: 1s;   }
+.p4 { left: 55%; animation-duration: 12s;   animation-delay: 3s;   }
+.p5 { left: 70%; animation-duration: 10s;   animation-delay: 0.5s; }
+.p6 { left: 85%; animation-duration: 9.5s;  animation-delay: 2.5s; }
+.p7 { left: 15%; animation-duration: 13s;   animation-delay: 4s;   }
+.p8 { left: 63%; animation-duration: 10.5s; animation-delay: 1.5s; }
+.p9 { right: 63%; animation-duration: 10.5s; animation-delay: 1.5s; }
+.p10 { left: 80%; animation-duration: 10.5s; animation-delay: 1.5s; }
+
 html, body {
   overflow-x: hidden;
 }
