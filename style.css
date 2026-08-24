@@ -807,6 +807,14 @@ footer h2 {
     transition: transform 0.3s ease;
   }
 
+  .nav-links a {
+    color: var(--cream);
+  }
+
+  .nav-links a:hover {
+    color: var(--cherry-blossom);
+  }
+
   .nav-links.open {
     transform: translateX(0);
   }
