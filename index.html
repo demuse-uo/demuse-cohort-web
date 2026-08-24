@@ -35,6 +35,7 @@
       <li><a href="#galeri">Galeri</a></li>
       <li><a href="#kegiatan">Kegiatan</a></li>
       <li><a href="#kontak">Contact</a></li>
+      <li><a href="#birthday">Birthday</a></li>
     </ul>
     <button class="burger" id="burgerBtn" aria-label="Buka menu">
       <div></div>
@@ -58,7 +59,7 @@
 <!-- content 1 end -->
 
    <!-- content 2: tentang -->
-  <section class="about reveal" id="tentang">
+  <section class="about slide-reveal" id="tentang">
     <span class="eyebrow">Tentang Kami</span>
     <h2>Bukan cuma kelas, ini rumah kedua.</h2>
      <p>deMuse adalah rumah buat 32 mahasiswa Universitas Terbuka angkatan 2026 — 
@@ -87,7 +88,7 @@
   </section>
   <!-- content 2 end -->
    <!-- content 3: anggota -->
-  <section class="members" id="anggota">
+  <section class="members slide-reveal" id="anggota">
   <h2>Warga Kahyangan</h2>
 
   <div class="members-grid">
@@ -378,7 +379,7 @@
   <!-- content 3 end -->
    <!-- content 4: galeri -->
   
-   <section class="gallery" id="galeri">
+   <section class="gallery slide-reveal" id="galeri">
   <span class="eyebrow">GALERI</span>
   <h2>Momen-momen deMuse</h2>
 
@@ -419,12 +420,29 @@
       <figcaption>Partisipasi Lomba Puisi <br>Kak Anis &amp; Kak Ajeng</figcaption>
     </figure>
 
+    <figure class="polaroid">
+      <div class="frame">
+        <img src="image/Agustus.jpg" alt="Hari Kemerdekaan RI">
+      </div>
+      <figcaption>Partisipasi HUT RI <br>Kak Tarry &amp; Kak Santi</figcaption>
+    </figure>
+
   </div>
 </section>
-
   <!-- content 4 end -->
+
+<!-- content 4b: birthday -->
+<section class="birthday slide-reveal" id="birthday">
+  <span class="eyebrow">Birthday</span>
+  <h2>Kalender Ulang Tahun</h2>
+  <p class="bday-intro">Galeri Panjang umur🎂</p>
+
+  <div class="bday-grid" id="bdayGrid"></div>
+</section>
+<!-- content 4b end -->
+
    <!-- content 5: capture moment -->
-  <section class="kegiatan" id="kegiatan">
+  <section class="kegiatan slide-reveal" id="kegiatan">
     <span class="eyebrow"> Kegiatan </span>
     <h2>Capture Moment</h2>
 <article class="moment-item">
@@ -462,41 +480,14 @@
    <ul class="socials">
   <li><a href="https://www.instagram.com/demuse.cohort?igsh=MTAyamp5dmM4OXAzaA%3D%3D&utm_source=qr&wa_status_inline=true" class="social-pill" aria-label="Instagram"><i class="fa-brands fa-square-instagram"></i></a></li>
   <li><a href="https://www.tiktok.com/@demuse.noir?is_from_webapp=1&sender_device=pc" class="social-pill" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a></li>
-</ul> 
+  </ul> 
 
-    <p class="fine">&copy; 2026 deMuse &middot; Warga Kahyangan</p>
+  <p class="copyright">© 2026 deMuse. All rights reserved.</p>
   </footer>
-  <!-- footer end --> 
-  <script>
-  // ===== Hamburger menu =====
-  const burger = document.getElementById('burgerBtn');
-  const navLinks = document.getElementById('navLinks');
-
-  burger.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
-  });
-
-  navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('open');
-    });
-  });
-
-  // ===== Scroll reveal animation =====
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15 });
-
-  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-</script>
-
+  <!-- footer end -->
 <script data-goatcounter="https://demuse.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 
+  <script src="script.js"></script>
 </body>
 </html>

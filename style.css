@@ -120,9 +120,10 @@ ul {
   align-items: center;
   justify-content: space-between;
   padding: 18px 6%;
-  background: #3e2723);
+  background: rgba(255, 251, 251, 0.258);
   backdrop-filter: blur(5px);
-  border-bottom: 1px solid rgba(59, 46, 77, 0.06);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .logo {
@@ -134,13 +135,18 @@ ul {
 
 .nav-links {
   display: flex;
-  gap: 28px;
+  gap: 22px;
   font-size: 0.95rem;
   font-weight: 600;
 }
 
-.nav-links a:hover {
+.nav-links a {
   color: var(--navy);
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--cream);
 }
 
 body {
@@ -379,6 +385,86 @@ body {
   text-align: center;
 }
 
+.birthday {
+  padding: 100px 6%;
+  text-align: center;
+}
+
+.bday-intro {
+  color: var(--espresso);
+  font-size: 0.95rem;
+  margin-bottom: 44px;
+}
+
+.birthday h2 {
+  margin: 14px auto 10px;
+}
+
+.bday-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.bday-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--cream-2);
+  border-radius: 16px;
+  padding: 14px 16px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bday-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.1);
+}
+
+.bday-card img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.bday-info b {
+  display: block;
+  color: var(--espresso);
+  font-size: 0.98rem;
+  letter-spacing: 0.5px;
+}
+
+.bday-info .tanggal {
+  display: block;
+  color: var(--navy);
+  font-size: 0.85rem;
+}
+
+.bday-info .sisa {
+  display: block;
+  color: #8a7a6d;
+  font-size: 0.75rem;
+  font-style: italic;
+  margin-top: 2px;
+}
+
+/* kartu yang ultah hari ini */
+.bday-card.today {
+  background: var(--peony);
+  box-shadow: 0 0 0 2px var(--espresso);
+}
+
+.bday-card.today .sisa {
+  color: var(--espresso);
+  font-style: normal;
+  font-weight: 700;
+}
+
 .gallery .eyebrow {
   background: rgba(255, 201, 140, 0.11);
   color: var(--espresso);
@@ -532,15 +618,162 @@ footer h2 {
   font-size: 0.82rem;
 }
 
-.reveal {
+/* ===== ANIMASI BUKA-TUTUP SLIDE ===== */
+/* tirai ketutup: dijepit dari atas & bawah ke tengah */
+.slide-reveal {
+  clip-path: inset(48% 0 48% 0);
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transform: scale(0.97);
+  transition: clip-path 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity   0.6s ease,
+              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.reveal.show {
+/* tirai kebuka penuh */
+.slide-reveal.open {
+  clip-path: inset(0 0 0 0);
   opacity: 1;
+  transform: scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slide-reveal,
+  .slide-reveal.open {
+    clip-path: none;
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ===== COUNTDOWN PIKNIK ===== */
+.countdown {
+  background: var(--espresso);
+  border-radius: 24px;
+  padding: 30px 24px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.cd-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--peony);
+  margin-bottom: 18px;
+}
+
+.cd-grid {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.cd-box {
+  background: var(--cherry-blossom);
+  border-radius: 14px;
+  padding: 16px 10px;
+  min-width: 72px;
+}
+
+.cd-box b {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--espresso);
+}
+
+.cd-box span {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--espresso);
+  opacity: 0.7;
+}
+
+/* ===== LIGHTBOX GALERI ===== */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: rgba(62, 39, 35, 0.92);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 40px 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.lightbox.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox img {
+  max-width: min(720px, 90vw);
+  max-height: 75vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.lightbox p {
+  color: var(--peony);
+  font-style: italic;
+  text-align: center;
+}
+
+.lb-close {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  background: none;
+  border: none;
+  color: var(--peony);
+  font-size: 2.4rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.polaroid { cursor: zoom-in; }
+
+/* ===== TOMBOL KEMBALI KE ATAS ===== */
+.to-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 90;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: var(--espresso);
+  color: var(--peony);
+  font-size: 1rem;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.to-top.show {
+  opacity: 1;
+  visibility: visible;
   transform: translateY(0);
+}
+
+.to-top:hover {
+  background: var(--ming);
 }
 
 .burger {
