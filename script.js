@@ -166,6 +166,7 @@ if (lightbox) {
       if (vid && lbVideo) {
         // isinya video
         lbVideo.src = vid.getAttribute('src');
+        lbVideo.load();
         lbVideo.classList.remove('lb-hide');
         lbImg.classList.add('lb-hide');
       } else {
