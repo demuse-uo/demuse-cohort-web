@@ -855,3 +855,126 @@ footer h2 {
     line-height: 1.6;
   }
 }
+
+/* ===================================================== */
+/* TAMBAHAN UNTUK HALAMAN TERPISAH (galeri.html & birthday.html) */
+/* Tempel di bagian PALING BAWAH style.css                */
+/* ===================================================== */
+
+/* jarak aman dari navbar yang posisinya fixed */
+.page-section {
+  margin-top: 30px;
+}
+
+/* tombol pindah halaman di bawah konten */
+.page-nav {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  padding: 20px 6% 40px;
+}
+
+/* menu yang lagi dibuka dikasih tanda */
+.nav-links a.active {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 2px;
+}
+
+/* logo di halaman terpisah jadi link ke beranda */
+.logo a {
+  color: inherit;
+}
+
+/* kartu ultah yang bisa diklik */
+.bday-card.has-link {
+  cursor: pointer;
+  position: relative;
+}
+
+.bday-card.has-link:hover {
+  background: var(--peony);
+  transform: translateY(-4px);
+}
+
+.bday-arrow {
+  margin-left: auto;
+  padding-left: 8px;
+  color: var(--espresso);
+  font-size: 1.1rem;
+  opacity: 0.45;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.bday-card.has-link:hover .bday-arrow {
+  opacity: 1;
+  transform: translateX(4px);
+}
+
+/* polaroid berisi video */
+.polaroid .frame video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.polaroid.is-video .frame {
+  position: relative;
+}
+
+.play-badge {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(62, 39, 35, 0.75);
+  color: var(--peony);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  padding-left: 3px;
+  pointer-events: none;
+  transition: transform 0.25s ease;
+}
+
+/* judul sub-bagian di galeri */
+.sub-heading {
+  font-family: 'Gyahegi', 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  color: var(--espresso);
+  margin-top: 20px;
+  padding-top: 40px;
+  border-top: 1px dashed rgba(62, 39, 35, 0.25);
+}
+
+/* polaroid video sedikit lebih besar */
+.scrapbook.reel .polaroid {
+  width: 300px;
+}
+
+.scrapbook.reel .polaroid .frame {
+  aspect-ratio: 16 / 9;
+}
+
+.polaroid.is-video:hover .play-badge {
+  transform: translate(-50%, -50%) scale(1.15);
+}
+
+/* video di dalam lightbox */
+.lightbox video {
+  max-width: min(720px, 90vw);
+  max-height: 75vh;
+  border-radius: 8px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+/* penyembunyi bergantian foto/video */
+.lb-hide {
+  display: none;
+}

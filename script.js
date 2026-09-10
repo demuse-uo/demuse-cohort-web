@@ -62,7 +62,7 @@ if (cdBox) {
 // Format tgl: 'MM-DD'  //
 const birthdays = [
   { nama: 'TARRY',   tgl: '07-15', foto: 'image/Ketua.jpg'    },
-  { nama: 'ANIS',    tgl: '09-02', foto: 'image/anicccc.jpg'  },
+  { nama: 'ANIS',    tgl: '09-02', foto: 'image/anicccc.jpg', link: 'https://invitationwebsiteee-faa.github.io/kakanicc/' },
   { nama: 'TANTI',   tgl: '06-04', foto: 'image/tantiiii.jpg' },
   { nama: 'SILFA',   tgl: '12-02', foto: 'image/silfa.jpg'    },
   { nama: 'SITI',    tgl: '05-25', foto: 'image/siti.jpg'    },
@@ -122,15 +122,22 @@ if (bdayGrid) {
     else if (sisa === 1) teksSisa = 'Besok!';
     else                 teksSisa = sisa + ' hari lagi';
 
+    // kalau punya link -> jadi <a>, kalau nggak -> tetap <div>
+    const tag  = orang.link ? 'a' : 'div';
+    const href = orang.link ? ` href="${orang.link}" target="_blank" rel="noopener"` : '';
+    const klik = orang.link ? ' has-link' : '';
+    const tanda = orang.link ? '<span class="bday-arrow">&rarr;</span>' : '';
+
     return `
-      <div class="bday-card ${sisa === 0 ? 'today' : ''}">
+      <${tag}${href} class="bday-card${klik} ${sisa === 0 ? 'today' : ''}">
         <img src="${orang.foto}" alt="Foto ${orang.nama}">
         <div class="bday-info">
           <b>${orang.nama}</b>
           <span class="tanggal">${hari} ${BULAN[bln - 1]}</span>
           <span class="sisa">${teksSisa}</span>
         </div>
-      </div>`;
+        ${tanda}
+      </${tag}>`;
   }).join('');
 }
 
@@ -140,21 +147,39 @@ const lightbox = document.getElementById('lightbox');
 
 if (lightbox) {
   const lbImg     = document.getElementById('lbImg');
+  const lbVideo   = document.getElementById('lbVideo');
   const lbCaption = document.getElementById('lbCaption');
 
   const closeLightbox = () => {
     lightbox.classList.remove('open');
     document.body.style.overflow = '';
+    if (lbVideo) {
+      lbVideo.pause();      // stop suara pas ditutup
+      lbVideo.src = '';
+    }
   };
 
   document.querySelectorAll('.polaroid').forEach(card => {
     card.addEventListener('click', () => {
-      const img = card.querySelector('img');
-      lbImg.src = img.src;
-      lbImg.alt = img.alt;
+      const vid = card.querySelector('video');
+
+      if (vid && lbVideo) {
+        // isinya video
+        lbVideo.src = vid.getAttribute('src');
+        lbVideo.classList.remove('lb-hide');
+        lbImg.classList.add('lb-hide');
+      } else {
+        // isinya foto
+        const img = card.querySelector('img');
+        lbImg.src = img.src;
+        lbImg.alt = img.alt;
+        lbImg.classList.remove('lb-hide');
+        if (lbVideo) lbVideo.classList.add('lb-hide');
+      }
+
       lbCaption.innerHTML = card.querySelector('figcaption').innerHTML;
       lightbox.classList.add('open');
-      document.body.style.overflow = 'hidden';   // halaman belakang nggak ikut scroll
+      document.body.style.overflow = 'hidden';
     });
   });
 

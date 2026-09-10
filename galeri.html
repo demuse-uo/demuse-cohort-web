@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeri &middot; deMuse</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="petals" aria-hidden="true">
+    <span class="petal p1">😘</span>
+    <span class="petal p2 moss">🌿</span>
+    <span class="petal p3 clay">❋</span>
+    <span class="petal p4">✧</span>
+    <span class="petal p5 moss">🎈</span>
+    <span class="petal p6 moss">🎃</span>
+    <span class="petal p7">❋</span>
+    <span class="petal p8 moss">☄️</span>
+    <span class="petal p9 moss">🙊</span>
+    <span class="petal p10 moss">❄️</span>
+  </div>
+
+  <!-- navbar -->
+  <nav class="navbar">
+    <div class="logo"><a href="index.html">deMuse</a></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="index.html#tentang">Tentang</a></li>
+      <li><a href="index.html#anggota">Anggota</a></li>
+      <li><a href="galeri.html" class="active">Galeri</a></li>
+      <li><a href="birthday.html">Birthday</a></li>
+      <li><a href="index.html#kontak">Contact</a></li>
+    </ul>
+    <button class="burger" id="burgerBtn" aria-label="Buka menu">
+      <div></div>
+      <div></div>
+      <div></div>
+    </button>
+  </nav>
+  <!-- navbar selesai -->
+
+  <!-- galeri -->
+  <section class="gallery page-section slide-reveal" id="galeri">
+    <span class="eyebrow">GALERI</span>
+    <h2>Momen-momen deMuse</h2>
+
+    <div class="scrapbook">
+
+      <figure class="polaroid">
+        <div class="frame">
+          <img src="image/warga.jpg" alt="OSMB">
+        </div>
+        <figcaption>OSMB</figcaption>
+      </figure>
+
+      <figure class="polaroid">
+        <div class="frame">
+          <img src="image/summit.jpg" alt="Bukit Timah Tracking unlocked">
+        </div>
+        <figcaption>Summit untuk pertama kalinya</figcaption>
+      </figure>
+
+      <figure class="polaroid">
+        <div class="frame">
+          <img src="image/qoqom.jpg" alt="ceu qoqom">
+        </div>
+        <figcaption>Ceu Qoqom perform majelis</figcaption>
+      </figure>
+
+      <figure class="polaroid">
+        <div class="frame">
+          <img src="image/Nonot.jpg" alt="kak nonot">
+        </div>
+        <figcaption>Moment Kak Nonot Ujian</figcaption>
+      </figure>
+
+      <figure class="polaroid">
+        <div class="frame">
+          <img src="image/lomba puisi.jpg" alt="Lomba Puisi">
+        </div>
+        <figcaption>Partisipasi Lomba Puisi <br>Kak Anis &amp; Kak Ajeng</figcaption>
+      </figure>
+
+      <figure class="polaroid">
+        <div class="frame">
+          <img src="image/Agustus.jpg" alt="Partisipasi HUT RI">
+        </div>
+        <figcaption>Partisipasi HUT RI <br>Kak Tarry &amp; Kak Santi</figcaption>
+      </figure>
+
+      <figure class="polaroid">
+        <div class="frame">
+          <img src="image/de Muse Picnic.png" alt="de Muse Picnic">
+        </div>
+        <figcaption>de Muse Picnic <br>Colors of Our Story🎈🎨</figcaption>
+      </figure>
+
+
+    </div>
+
+    <!-- bagian video -->
+    <h3 class="sub-heading">Video</h3>
+
+    <div class="scrapbook reel">
+
+      <figure class="polaroid is-video">
+        <div class="frame">
+          <video src="vidio/picnic.mp4" preload="metadata" muted playsinline></video>
+          <span class="play-badge"><i class="fa-solid fa-play"></i></span>
+        </div>
+        <figcaption>Cuplikan Piknik</figcaption>
+      </figure>
+
+    </div>
+    <!-- bagian video selesai -->
+
+  </section>
+  <!-- galeri selesai -->
+
+  <div class="page-nav">
+    <a href="index.html" class="btn">&larr; Kembali ke Beranda</a>
+    <a href="birthday.html" class="btn">Kalender Ulang Tahun &rarr;</a>
+  </div>
+
+  <!-- footer -->
+  <footer id="kontak">
+    <span class="eyebrow">Contact</span>
+    <h2>Our Social Media</h2>
+
+    <ul class="socials">
+      <li><a href="https://www.instagram.com/demuse.cohort?igsh=MTAyamp5dmM4OXAzaA%3D%3D&utm_source=qr&wa_status_inline=true" class="social-pill" aria-label="Instagram"><i class="fa-brands fa-square-instagram"></i></a></li>
+      <li><a href="https://www.tiktok.com/@demuse.noir?is_from_webapp=1&sender_device=pc" class="social-pill" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a></li>
+    </ul>
+
+    <p class="copyright">&copy; 2026 deMuse. All rights reserved.</p>
+  </footer>
+  <!-- footer end -->
+
+  <!-- lightbox galeri -->
+  <div class="lightbox" id="lightbox">
+    <button class="lb-close" id="lbClose" aria-label="Tutup">&times;</button>
+    <img id="lbImg" src="" alt="">
+    <video id="lbVideo" controls playsinline></video>
+    <p id="lbCaption"></p>
+  </div>
+
+  <!-- tombol kembali ke atas -->
+  <button class="to-top" id="toTop" aria-label="Kembali ke atas">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script data-goatcounter="https://demuse.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>
