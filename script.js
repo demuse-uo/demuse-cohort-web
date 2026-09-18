@@ -70,7 +70,7 @@ const birthdays = [
   { nama: 'PUJI',    tgl: '08-26', foto: 'image/puji.jpg'},
   { nama: 'SEPTYANA',tgl: '09-04', foto: 'image/septyana.jpg'},
   { nama: 'LIKA',    tgl: '09-06', foto: 'image/Lika.jpg'},
-  { nama: 'RIA',     tgl: '09-19', foto: 'image/ria.jpg'},
+  { nama: 'RIA',     tgl: '09-19', foto: 'image/ria.jpg', link: 'https://invitationwebsiteee-faa.github.io/musesRia/'},
   { nama: 'ASFIRINASRI',   tgl: '09-21', foto: 'image/Asfirinasri.jpg'},
   { nama: 'ESTER',   tgl: '09-23', foto: 'image/ester.jpg'},
   { nama: 'MUJNAH',  tgl: '09-24', foto: 'image/mujnah.jpg'},
