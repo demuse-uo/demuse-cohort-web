@@ -62,7 +62,7 @@ if (cdBox) {
 // Format tgl: 'MM-DD'  //
 const birthdays = [
   { nama: 'TARRY',   tgl: '07-15', foto: 'image/Ketua.jpg'    },
-  { nama: 'ANIS',    tgl: '09-02', foto: 'image/anicccc.jpg', link: 'https://invitationwebsiteee-faa.github.io/kakanicc/' },
+  { nama: 'ANIS',    tgl: '09-02', foto: 'image/anicccc.jpg', link: 'https://iyaastudio.github.io/kakanicc/' },
   { nama: 'TANTI',   tgl: '06-04', foto: 'image/tantiiii.jpg' },
   { nama: 'SILFA',   tgl: '12-02', foto: 'image/silfa.jpg'    },
   { nama: 'SITI',    tgl: '05-25', foto: 'image/siti.jpg'    },
@@ -70,8 +70,8 @@ const birthdays = [
   { nama: 'PUJI',    tgl: '08-26', foto: 'image/puji.jpg'},
   { nama: 'SEPTYANA',tgl: '09-04', foto: 'image/septyana.jpg'},
   { nama: 'LIKA',    tgl: '09-06', foto: 'image/Lika.jpg'},
-  { nama: 'RIA',     tgl: '09-19', foto: 'image/ria.jpg', link: 'https://invitationwebsiteee-faa.github.io/musesRia/'},
-  { nama: 'ASFIRINASRI',   tgl: '09-21', foto: 'image/Asfirinasri.jpg', link: 'https://invitationwebsiteee-faa.github.io/kakrindu/'},
+  { nama: 'RIA',     tgl: '09-19', foto: 'image/ria.jpg', link: 'https://iyaastudio.github.io/musesRia/'},
+  { nama: 'ASFIRINASRI',   tgl: '09-21', foto: 'image/Asfirinasri.jpg', link: 'https://iyaastudio.github.io/kakrindu/'},
   { nama: 'ESTER',   tgl: '09-23', foto: 'image/ester.jpg'},
   { nama: 'MUJNAH',  tgl: '09-24', foto: 'image/mujnah.jpg'},
   { nama: 'RISMA',   tgl: '09-26', foto: 'image/risma.jpg'},
