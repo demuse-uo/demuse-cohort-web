@@ -4,11 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Galeri &middot; deMuse</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
+  <script>document.documentElement.classList.add('gsap-siap');</script>
 </head>
 <body>
 
@@ -46,64 +52,64 @@
   <!-- navbar selesai -->
 
   <!-- galeri -->
-  <section class="gallery page-section slide-reveal" id="galeri">
-    <span class="eyebrow">GALERI</span>
-    <h2>Momen-momen deMuse</h2>
+  <section class="gallery page-section" id="galeri">
+    <span class="eyebrow anim-masuk">GALERI</span>
+    <h2 class="anim-masuk">Momen-momen deMuse</h2>
 
     <div class="scrapbook">
 
-      <figure class="polaroid">
+      <figure class="polaroid anim-pudar">
         <div class="frame">
-          <img src="image/warga.jpg" alt="OSMB">
+          <img src="image/warga.jpg" alt="OSMB" loading="lazy" decoding="async">
         </div>
         <figcaption>OSMB</figcaption>
       </figure>
 
-      <figure class="polaroid">
+      <figure class="polaroid anim-pudar">
         <div class="frame">
-          <img src="image/summit.jpg" alt="Bukit Timah Tracking unlocked">
+          <img src="image/summit.jpg" alt="Bukit Timah Tracking unlocked" loading="lazy" decoding="async">
         </div>
         <figcaption>Summit untuk pertama kalinya</figcaption>
       </figure>
 
-      <figure class="polaroid">
+      <figure class="polaroid anim-pudar">
         <div class="frame">
-          <img src="image/qoqom.jpg" alt="ceu qoqom">
+          <img src="image/qoqom.jpg" alt="ceu qoqom" loading="lazy" decoding="async">
         </div>
         <figcaption>Ceu Qoqom perform majelis</figcaption>
       </figure>
 
-      <figure class="polaroid">
+      <figure class="polaroid anim-pudar">
         <div class="frame">
-          <img src="image/Nonot.jpg" alt="kak nonot">
+          <img src="image/Nonot.jpg" alt="kak nonot" loading="lazy" decoding="async">
         </div>
         <figcaption>Moment Kak Nonot Ujian</figcaption>
       </figure>
 
-      <figure class="polaroid">
+      <figure class="polaroid anim-pudar">
         <div class="frame">
-          <img src="image/lomba puisi.jpg" alt="Lomba Puisi">
+          <img src="image/lomba puisi.jpg" alt="Lomba Puisi" loading="lazy" decoding="async">
         </div>
         <figcaption>Partisipasi Lomba Puisi <br>Kak Anis &amp; Kak Ajeng</figcaption>
       </figure>
 
-      <figure class="polaroid">
+      <figure class="polaroid anim-pudar">
         <div class="frame">
-          <img src="image/Agustus.jpg" alt="Partisipasi HUT RI">
+          <img src="image/Agustus.jpg" alt="Partisipasi HUT RI" loading="lazy" decoding="async">
         </div>
         <figcaption>Partisipasi HUT RI <br>Kak Tarry &amp; Kak Santi</figcaption>
       </figure>
 
-      <figure class="polaroid">
+      <figure class="polaroid anim-pudar">
         <div class="frame">
-          <img src="image/de Muse Picnic.png" alt="de Muse Picnic">
+          <img src="image/de Muse Picnic.png" alt="de Muse Picnic" loading="lazy" decoding="async">
         </div>
         <figcaption>de Muse Picnic <br>Colors of Our Story🎈🎨</figcaption>
       </figure>
 
-      <figure class="polaroid">
+      <figure class="polaroid anim-pudar">
         <div class="frame">
-          <img src="image/mega fashion.jpeg" alt="de Muse Picnic">
+          <img src="image/mega fashion.jpeg" alt="de Muse Picnic" loading="lazy" decoding="async">
         </div>
         <figcaption> Batik Fashion Show <br> Mega Aprilia Rahayu💝</figcaption>
       </figure>
@@ -112,11 +118,11 @@
     </div>
 
     <!-- bagian video -->
-    <h3 class="sub-heading">Video</h3>
+    <h3 class="sub-heading anim-masuk">Video</h3>
 
     <div class="scrapbook reel">
 
-      <figure class="polaroid is-video">
+      <figure class="polaroid is-video anim-pudar">
         <div class="frame">
                 <video src="vidio/picnic-web-compressed.mp4"
                  poster="image/thumb-picnic.jpg"
@@ -126,7 +132,7 @@
         <figcaption>Picnic</figcaption>
       </figure>
 
-      <figure class="polaroid is-video">
+      <figure class="polaroid is-video anim-pudar">
         <div class="frame">
           <video src="vidio/picnic-2.mp4"
                  poster="image/thumb-picnic-2.jpg"
@@ -138,7 +144,7 @@
 
     </div>
 
-    <p class="video-note">
+    <p class="video-note anim-masuk">
         <i class="fa-solid fa-circle-info"></i>
         Jika video tidak bisa diputar dari browser Instagram. Ketuk
         <b>&middot;&middot;&middot;</b> di pojok kanan atas, lalu pilih
@@ -171,7 +177,7 @@
   <!-- lightbox galeri -->
   <div class="lightbox" id="lightbox">
     <button class="lb-close" id="lbClose" aria-label="Tutup">&times;</button>
-    <img id="lbImg" src="" alt="">
+    <img id="lbImg" src="" alt="" loading="lazy" decoding="async">
     <video id="lbVideo" controls playsinline></video>
     <p id="lbCaption"></p>
   </div>
@@ -184,6 +190,10 @@
   <script data-goatcounter="https://demuse.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>
 
-  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+  <script src="script.js" defer></script>
+  <script src="animasi.js" defer></script>
 </body>
 </html>

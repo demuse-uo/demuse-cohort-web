@@ -4,11 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mading &middot; deMuse</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
+  <script>document.documentElement.classList.add('gsap-siap');</script>
 </head>
 <body>
 
@@ -45,15 +51,15 @@
   </nav>
   <!-- navbar selesai -->
 
-  <section class="mading page-section slide-reveal" id="mading">
-    <span class="eyebrow">Mading</span>
-    <h2>Papan Berbagi deMuse</h2>
-    <p class="mading-intro">
+  <section class="mading page-section" id="mading">
+    <span class="eyebrow anim-masuk">Mading</span>
+    <h2 class="anim-masuk">Papan Berbagi deMuse</h2>
+    <p class="mading-intro anim-masuk">
       Punya rangkuman, materi, tips belajar, atau info penting lainya?
       Tempel di sini yukk biar semua warga Kahyangan bisa baca dan manfaatin bareng-bareng! 📝
     </p>
 
-    <button class="btn mading-toggle" id="toggleForm">
+    <button class="btn mading-toggle anim-masuk" id="toggleForm">
       <i class="fa-solid fa-plus"></i> Tempel Sesuatu
     </button>
 
@@ -138,7 +144,11 @@
   <script data-goatcounter="https://demuse.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>
 
-  <script src="script.js"></script>
-  <script src="mading.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+  <script src="script.js" defer></script>
+  <script src="mading.js" defer></script>
+  <script src="animasi.js" defer></script>
 </body>
 </html>

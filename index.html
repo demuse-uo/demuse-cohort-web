@@ -4,11 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>deMuse</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+
+  <!-- Penanda JavaScript aktif. Harus di <head>, sebelum isi halaman,
+       supaya elemen animasi tidak sempat berkedip. -->
+  <script>document.documentElement.classList.add('gsap-siap');</script>
 </head>
 <body>
 
@@ -52,36 +60,44 @@
   <div class="blob blob-2"></div>
   <div class="blob blob-3"></div>
 
-  <span class="eyebrow">Warga · deMuse</span>
-  <h1>Welcome to Our <span class="highlight">deMuse</span></h1>
-  <p>Ruang kecil di internet untuk kita  menyimpan cerita, momen, dan semua hal seru</p>
-  <a href="#tentang" class="btn">Jelajahi Kelas</a>
+  <span class="eyebrow anim-hero">Warga · deMuse</span>
+  <h1 class="anim-hero">Welcome to Our <span class="highlight">deMuse</span></h1>
+  <p class="anim-hero">Ruang kecil di internet untuk kita  menyimpan cerita, momen, dan semua hal seru</p>
+  <a href="#tentang" class="btn anim-hero">Jelajahi Kelas</a>
+
+  <!-- stiker layar pembuka -->
+  <img class="stiker stiker-kopi"  src="image/stiker/kucing-kopi.png" alt="" aria-hidden="true">
+  <img class="stiker stiker-chat"  src="image/stiker/chat.png"        alt="" aria-hidden="true">
+  <img class="stiker stiker-kilau" src="image/stiker/kilau.png"       alt="" aria-hidden="true">
+  <img class="stiker stiker-bunga" src="image/stiker/bunga.png"       alt="" aria-hidden="true">
 </section>
 <!-- content 1 end -->
 
+  <div class="garis-belang"></div>
+
    <!-- content 2: tentang -->
-  <section class="about slide-reveal" id="tentang">
-    <span class="eyebrow">Tentang Kami</span>
-    <h2>Bukan cuma kelas, ini rumah kedua.</h2>
-     <p>deMuse adalah rumah buat 32 mahasiswa Universitas Terbuka angkatan 2026 — 
+  <section class="about" id="tentang">
+    <span class="eyebrow anim-masuk">Tentang Kami</span>
+    <h2 class="anim-masuk">Bukan cuma kelas, ini rumah kedua.</h2>
+     <p class="anim-masuk">deMuse adalah rumah buat 32 mahasiswa Universitas Terbuka angkatan 2026 — 
       datang dari sepuluh jurusan berbeda: Manajemen, Sistem Informasi, Ilmu Administrasi Bisnis, 
       Ilmu Komunikasi, Ilmu Hukum, Akuntansi, Ilmu Perpustakaan, Sastra Inggris, Ekonomi Pembangunan, Sosiologi. 
       Beda jurusan, beda cara belajar, tapi satu semangat: saling bantu, saling dengar, dan saling nemenin dari tugas pertama sampai nanti wisuda.</p>
 
     <div class="stat-row">
-      <div class="stat">
+      <div class="stat anim-kartu">
         <b>32</b>
         <span>Anggota Kelas</span>
       </div>
-      <div class="stat">
+      <div class="stat anim-kartu">
         <b>2026</b>
         <span>Angkatan</span>
       </div>
-      <div class="stat">
+      <div class="stat anim-kartu">
         <b>∞</b>
         <span>Drama & Cerita</span>
       </div>
-      <div class="stat">
+      <div class="stat anim-kartu">
         <b>10</b>
         <span>Program Studi</span>
       </div>
@@ -89,284 +105,288 @@
   </section>
   <!-- content 2 end -->
    <!-- content 3: anggota -->
-  <section class="members slide-reveal" id="anggota">
-  <h2>Warga Kahyangan</h2>
+  <section class="members" id="anggota">
+  <h2 class="anim-masuk">Warga Kahyangan</h2>
+
+  <!-- stiker bagian anggota -->
+  <img class="stiker stiker-buku"   src="image/stiker/buku.png"        alt="" aria-hidden="true" loading="lazy" decoding="async">
+  <img class="stiker stiker-wisuda" src="image/stiker/topi-wisuda.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
 
   <div class="members-grid">
 
-    <div class="member-card">
+    <div class="member-card anim-kartu">
       <div class="avatar">
-        <img src="image/Ketua.jpg" alt="Foto Tarry">
+        <img src="image/Ketua.jpg" alt="Foto Tarry" loading="lazy" decoding="async">
       </div>
       <h3>TARRY</h3>
       <span>Ketua</span>
       <span class="prodi">Ilmu Komunikasi</span>
     </div>
 
-    <div class="member-card">
+    <div class="member-card anim-kartu">
       <div class="avatar">
-        <img src="image/anicccc.jpg" alt="Foto Anis">
+        <img src="image/anicccc.jpg" alt="Foto Anis" loading="lazy" decoding="async">
       </div>
       <h3>ANIS</h3>
       <span>Wakil Ketua</span>
       <span class="prodi">Sistem Informasi</span>
     </div>
 
-    <div class="member-card">
+    <div class="member-card anim-kartu">
       <div class="avatar">
-        <img src="image/tantiiii.jpg" alt="Foto Tanti">
+        <img src="image/tantiiii.jpg" alt="Foto Tanti" loading="lazy" decoding="async">
       </div>
       <h3>TANTI</h3>
       <span>Sekretaris 1</span>
       <span class="prodi">Manajemen</span>
     </div>
 
-    <div class="member-card">
+    <div class="member-card anim-kartu">
       <div class="avatar">
-        <img src="image/rasitiiii.jpg" alt="Foto Rasiti">
+        <img src="image/rasitiiii.jpg" alt="Foto Rasiti" loading="lazy" decoding="async">
       </div>
       <h3>RASITI</h3>
       <span>Sekretaris 2</span>
       <span class="prodi">Ilmu Perpustakaan</span>
     </div>
 
-    <div class="member-card">
+    <div class="member-card anim-kartu">
       <div class="avatar">
-        <img src="image/santiiiii.jpg" alt="Foto Santi">
+        <img src="image/santiiiii.jpg" alt="Foto Santi" loading="lazy" decoding="async">
       </div>
       <h3>SANTI</h3>
       <span>Bendahara 1</span>
       <span class="prodi">Ekonomi Pembangunan</span>
     </div>
 
-    <div class="member-card">
+    <div class="member-card anim-kartu">
       <div class="avatar">
-        <img src="image/erninggg.jpg" alt="Foto Erning">
+        <img src="image/erninggg.jpg" alt="Foto Erning" loading="lazy" decoding="async">
       </div>
       <h3>ERNING</h3>
       <span>Bendahara 2</span>
       <span class="prodi">Akuntansi</span>
     </div>
 
-    <div class="member-card">
+    <div class="member-card anim-kartu">
       <div class="avatar">
-        <img src="image/mardiana.jpg" alt="Foto Mardiana">
+        <img src="image/mardiana.jpg" alt="Foto Mardiana" loading="lazy" decoding="async">
       </div>
       <h3>MARDIANA</h3>
       <span>Media & Informasi 1</span>
       <span class="prodi">Ilmu Komunikasi</span>
     </div>
 
-    <div class="member-card">
+    <div class="member-card anim-kartu">
       <div class="avatar">
-        <img src="image/silfa.jpg" alt="Foto Silfa">
+        <img src="image/silfa.jpg" alt="Foto Silfa" loading="lazy" decoding="async">
       </div>
       <h3>SILFA</h3>
       <span>Media & Informasi 2</span> 
       <span class="prodi">Ilmu Administrasi Bisnis</span>
     </div>
 
-    <div class="member-card">
+    <div class="member-card anim-kartu">
       <div class="avatar">
-        <img src="image/Ajeng.jpg" alt="Foto Ajeng">
+        <img src="image/Ajeng.jpg" alt="Foto Ajeng" loading="lazy" decoding="async">
       </div>
       <h3>AJENG</h3>
       <span>Anggota</span> 
       <span class="prodi">Manajemen</span>
     </div>
 
-    <div class="member-card">
+    <div class="member-card anim-kartu">
       <div class="avatar">
-        <img src="image/Asfirinasri.jpg" alt="Foto Asfirinasri">
+        <img src="image/Asfirinasri.jpg" alt="Foto Asfirinasri" loading="lazy" decoding="async">
       </div>
       <h3>ASFIRINASRI</h3>
       <span>Anggota</span>
       <span class="prodi">Ilmu Komunikasi</span> 
     </div>
 
-    <div class="member-card">
+    <div class="member-card anim-kartu">
       <div class="avatar">
-        <img src="image/Erni.jpg" alt="Foto Erni">
+        <img src="image/Erni.jpg" alt="Foto Erni" loading="lazy" decoding="async">
       </div>
       <h3>ERNI</h3>
       <span>Anggota</span>
       <span class="prodi">Manajemen</span>
     </div>
 
-    <div class="member-card">
+    <div class="member-card anim-kartu">
       <div class="avatar">
-        <img src="image/ester.jpg" alt="Foto ester">
+        <img src="image/ester.jpg" alt="Foto ester" loading="lazy" decoding="async">
       </div>
       <h3>ESTER</h3>
       <span>Anggota</span>
       <span class="prodi">Sastra Inggris</span>
     </div>
 
-    <div class="member-card">
+    <div class="member-card anim-kartu">
       <div class="avatar">
-        <img src="image/ika.jpg" alt="Foto Ika">
+        <img src="image/ika.jpg" alt="Foto Ika" loading="lazy" decoding="async">
       </div>
       <h3>IKA</h3>
       <span>Anggota</span>
       <span class="prodi">Sosiologi</span>
     </div>
 
-    <div class="member-card">
+    <div class="member-card anim-kartu">
       <div class="avatar">
-        <img src="image/jeni.jpg" alt="Foto Jeni">
+        <img src="image/jeni.jpg" alt="Foto Jeni" loading="lazy" decoding="async">
       </div>
       <h3>JENI</h3>
       <span>Anggota</span>
       <span class="prodi">Manajemen</span>
     </div>
 
-    <div class="member-card">
+    <div class="member-card anim-kartu">
       <div class="avatar">
-        <img src="image/Lika.jpg" alt="Foto Lika">
+        <img src="image/Lika.jpg" alt="Foto Lika" loading="lazy" decoding="async">
       </div>
       <h3>LIKA</h3>
       <span>Anggota</span>
       <span class="prodi">Sistem Informasi</span>
     </div>
 
-    <div class="member-card">
+    <div class="member-card anim-kartu">
       <div class="avatar">
-        <img src="image/Mega.jpg" alt="Foto Mega">
+        <img src="image/Mega.jpg" alt="Foto Mega" loading="lazy" decoding="async">
       </div>
       <h3>MEGA</h3>
       <span>Anggota</span>
       <span class="prodi">Manajemen</span>
     </div>
 
-    <div class="member-card">
+    <div class="member-card anim-kartu">
       <div class="avatar">
-        <img src="image/mujnah.jpg" alt="Foto Mujnah">
+        <img src="image/mujnah.jpg" alt="Foto Mujnah" loading="lazy" decoding="async">
       </div>
       <h3>MUJNAH</h3>
       <span>Anggota</span>
       <span class="prodi">Ilmu Hukum</span>
     </div>
 
-    <div class="member-card">
+    <div class="member-card anim-kartu">
       <div class="avatar">
-        <img src="image/nurul.jpg" alt="Foto Nurul">
+        <img src="image/nurul.jpg" alt="Foto Nurul" loading="lazy" decoding="async">
       </div>
       <h3>NURUL</h3>
       <span>Anggota</span>
       <span class="prodi">Sastra Inggris</span>
     </div>
 
-    <div class="member-card">
+    <div class="member-card anim-kartu">
       <div class="avatar">
-        <img src="image/poni.jpg" alt="Foto Poni">
+        <img src="image/poni.jpg" alt="Foto Poni" loading="lazy" decoding="async">
       </div>
       <h3>PONI</h3>
       <span>Anggota</span>
       <span class="prodi">Manajemen</span>
     </div>
 
-    <div class="member-card">
+    <div class="member-card anim-kartu">
       <div class="avatar">
-        <img src="image/priska.jpg" alt="Foto Priska">
+        <img src="image/priska.jpg" alt="Foto Priska" loading="lazy" decoding="async">
       </div>
       <h3>PRISKA</h3>
       <span>Anggota</span>
       <span class="prodi">Manajemen</span>
     </div>
 
-    <div class="member-card">
+    <div class="member-card anim-kartu">
       <div class="avatar">
-        <img src="image/reza.jpg" alt="Foto Reza">
+        <img src="image/reza.jpg" alt="Foto Reza" loading="lazy" decoding="async">
       </div>
       <h3>REZA</h3>
       <span>Anggota</span>
       <span class="prodi">Sastra Inggris</span>
     </div>
 
-    <div class="member-card">
+    <div class="member-card anim-kartu">
       <div class="avatar">
-        <img src="image/ria.jpg" alt="Foto Ria">
+        <img src="image/ria.jpg" alt="Foto Ria" loading="lazy" decoding="async">
       </div>
       <h3>RIA</h3>
       <span>Anggota</span>
       <span class="prodi">Sistem Informasi</span>
     </div>
 
-    <div class="member-card">
+    <div class="member-card anim-kartu">
       <div class="avatar">
-        <img src="image/risma.jpg" alt="Foto Risma">
+        <img src="image/risma.jpg" alt="Foto Risma" loading="lazy" decoding="async">
       </div>
       <h3>RISMA</h3>
       <span>Anggota</span>
       <span class="prodi">Manajemen</span>
     </div>
 
-    <div class="member-card">
+    <div class="member-card anim-kartu">
       <div class="avatar">
-        <img src="image/selvia.jpg" alt="Foto Selvia">
+        <img src="image/selvia.jpg" alt="Foto Selvia" loading="lazy" decoding="async">
       </div>
       <h3>SELVIA</h3>
       <span>Anggota</span>
       <span class="prodi">Ilmu Administrasi Bisnis</span>
     </div>
 
-    <div class="member-card">
+    <div class="member-card anim-kartu">
       <div class="avatar">
-        <img src="image/septyana.jpg" alt="Foto Septyana">
+        <img src="image/septyana.jpg" alt="Foto Septyana" loading="lazy" decoding="async">
       </div>
       <h3>SEPTYANA</h3>
       <span>Anggota</span>
       <span class="prodi">Ilmu Hukum</span>
     </div>
 
-    <div class="member-card">
+    <div class="member-card anim-kartu">
       <div class="avatar">
-        <img src="image/sipora.jpg" alt="Foto Sipora">
+        <img src="image/sipora.jpg" alt="Foto Sipora" loading="lazy" decoding="async">
       </div>
       <h3>SIPORA</h3>
       <span>Anggota</span>
       <span class="prodi">Ilmu Hukum</span>
     </div>
 
-    <div class="member-card">
+    <div class="member-card anim-kartu">
       <div class="avatar">
-        <img src="image/qomariah.jpg" alt="Foto Qomariah">
+        <img src="image/qomariah.jpg" alt="Foto Qomariah" loading="lazy" decoding="async">
       </div>
       <h3>QOMARIAH</h3>
       <span>Anggota</span>
       <span class="prodi">Manajemen</span>
     </div>
 
-    <div class="member-card">
+    <div class="member-card anim-kartu">
       <div class="avatar">
-        <img src="image/siti.jpg" alt="Foto Siti">
+        <img src="image/siti.jpg" alt="Foto Siti" loading="lazy" decoding="async">
       </div>
       <h3>SITI</h3>
       <span>Anggota</span>
       <span class="prodi">Akuntansi</span>
     </div>
 
-    <div class="member-card">
+    <div class="member-card anim-kartu">
       <div class="avatar">
-        <img src="image/puji.jpg" alt="Foto Puji">
+        <img src="image/puji.jpg" alt="Foto Puji" loading="lazy" decoding="async">
       </div>
       <h3>PUJI</h3>
       <span>Anggota</span>
       <span class="prodi">Manajemen</span>
     </div>
 
-    <div class="member-card">
+    <div class="member-card anim-kartu">
       <div class="avatar">
-        <img src="image/rini.jpg" alt="Foto Rini">
+        <img src="image/rini.jpg" alt="Foto Rini" loading="lazy" decoding="async">
       </div>
       <h3>RINI</h3>
       <span>Anggota</span>
       <span class="prodi">Manajemen</span>
     </div>
 
-    <div class="member-card">
+    <div class="member-card anim-kartu">
       <div class="avatar">
-        <img src="image/wini.jpg" alt="Foto Wini">
+        <img src="image/wini.jpg" alt="Foto Wini" loading="lazy" decoding="async">
       </div>
       <h3>WINI</h3>
       <span>Anggota</span>
@@ -377,11 +397,14 @@
 </section>
   <!-- content 3 end -->
 
+  <div class="garis-belang"></div>
+
    <!-- content 5: capture moment -->
-  <section class="kegiatan slide-reveal" id="kegiatan">
-    <span class="eyebrow"> Kegiatan </span>
-    <h2>Capture Moment</h2>
-<article class="moment-item">
+  <section class="kegiatan" id="kegiatan">
+    <span class="eyebrow anim-masuk"> Kegiatan </span>
+    <h2 class="anim-masuk">Capture Moment</h2>
+
+<article class="moment-item anim-baris">
   <span class="moment-date">Hari 1</span>
     <div class="moment-body">
       <h3>Kenalan Lintas Jurusan</h3>
@@ -389,7 +412,7 @@
     </div>
 </article>
 
-<article class="moment-item">
+<article class="moment-item anim-baris">
   <span class="moment-date">Tuton</span>
     <div class="moment-body">
       <h3>Diskusi yang Nggak Pernah Sepi</h3>
@@ -397,11 +420,11 @@
     </div>
 </article>
 
-<article class="moment-item">
-  <span class="moment-date">Nanti</span>
+<article class="moment-item anim-baris">
+  <span class="moment-date">Agustus</span>
     <div class="moment-body">
       <h3>Piknik, 30 Agustus 2026</h3>
-      <p>Rencana ketemu langsung buat pertama kalinya — semua jurusan kumpul jadi satu, bukan cuma lewat layar HP lagi.</p>
+      <p>Akhirnya ketemu langsung buat pertama kalinya — semua jurusan kumpul jadi satu, bukan cuma lewat layar HP lagi. Cuplikannya ada di halaman Galeri.</p>
     </div>
 </article>
     
@@ -424,6 +447,12 @@
 <script data-goatcounter="https://demuse.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 
-  <script src="script.js"></script>
+  <!-- GSAP: inti + ScrollTrigger. Dimuat dari CDN, total sekitar 48 KB.
+       Harus dimuat SEBELUM animasi.js. -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+  <script src="script.js" defer></script>
+  <script src="animasi.js" defer></script>
 </body>
 </html>

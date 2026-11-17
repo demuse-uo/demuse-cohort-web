@@ -18,7 +18,6 @@ if (burger && navLinks) {
 // ===== Slide reveal (animasi buka-tutup) =====
 const slideObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
-    // toggle, bukan add -> nutup lagi pas keluar layar
     entry.target.classList.toggle('open', entry.isIntersecting);
   });
 }, {
@@ -59,7 +58,6 @@ if (cdBox) {
 
 
 // ===== Galeri Birthday =====
-// Format tgl: 'MM-DD'  //
 const birthdays = [
   { nama: 'TARRY',   tgl: '07-15', foto: 'image/Ketua.jpg'    },
   { nama: 'ANIS',    tgl: '09-02', foto: 'image/anicccc.jpg', link: 'https://invitationwebsiteee-faa.github.io/kakanicc/' },
@@ -91,7 +89,6 @@ const birthdays = [
   { nama: 'MEGA',    tgl: '04-14', foto: 'image/Mega.jpg'},
   { nama: 'QOMARIYAH',     tgl: '04-16', foto: 'image/qomariah.jpg'},
   { nama: 'SIPORA',     tgl: '04-27', foto: 'image/sipora.jpg'},
-  // ...lanjutin sisanya di sini
 ];
 
 const BULAN = ['Januari','Februari','Maret','April','Mei','Juni',
@@ -103,7 +100,7 @@ function sisaHari(tgl) {
   const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
 
   let next = new Date(today.getFullYear(), bln - 1, hari);
-  if (next < today) next.setFullYear(next.getFullYear() + 1);   // udah lewat -> tahun depan
+  if (next < today) next.setFullYear(next.getFullYear() + 1);   
 
   return Math.round((next - today) / 86400000);
 }
@@ -122,15 +119,15 @@ if (bdayGrid) {
     else if (sisa === 1) teksSisa = 'Besok!';
     else                 teksSisa = sisa + ' hari lagi';
 
-    // kalau punya link -> jadi <a>, kalau nggak -> tetap <div>
+    
     const tag  = orang.link ? 'a' : 'div';
     const href = orang.link ? ` href="${orang.link}" target="_blank" rel="noopener"` : '';
     const klik = orang.link ? ' has-link' : '';
     const tanda = orang.link ? '<span class="bday-arrow">&rarr;</span>' : '';
 
     return `
-      <${tag}${href} class="bday-card${klik} ${sisa === 0 ? 'today' : ''}">
-        <img src="${orang.foto}" alt="Foto ${orang.nama}">
+      <${tag}${href} class="bday-card anim-kartu${klik} ${sisa === 0 ? 'today' : ''}">
+        <img src="${orang.foto}" alt="Foto ${orang.nama}" loading="lazy" decoding="async">
         <div class="bday-info">
           <b>${orang.nama}</b>
           <span class="tanggal">${hari} ${BULAN[bln - 1]}</span>
@@ -154,7 +151,7 @@ if (lightbox) {
     lightbox.classList.remove('open');
     document.body.style.overflow = '';
     if (lbVideo) {
-      lbVideo.pause();      // stop suara pas ditutup
+      lbVideo.pause();      
       lbVideo.src = '';
     }
   };
@@ -164,13 +161,13 @@ if (lightbox) {
       const vid = card.querySelector('video');
 
       if (vid && lbVideo) {
-        // isinya video
+        
         lbVideo.src = vid.getAttribute('src');
         lbVideo.load();
         lbVideo.classList.remove('lb-hide');
         lbImg.classList.add('lb-hide');
       } else {
-        // isinya foto
+        
         const img = card.querySelector('img');
         lbImg.src = img.src;
         lbImg.alt = img.alt;

@@ -1,7 +1,3 @@
-/* =========================================================
-   MADING deMuse
-   Ganti URL di bawah dengan URL Web App dari Apps Script.
-   ========================================================= */
 const MADING_API = 'https://script.google.com/macros/s/AKfycbyd7dWhpBHOdcD0A07JDTwm7nP3QYp-ThmC-cBLNBM_WKN3P6-eDHsz25c7guTY15-nxA/exec';
 
 const MAX_MB = 5;   // batas ukuran file
